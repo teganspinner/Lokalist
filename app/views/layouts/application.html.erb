@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lokalist</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= render "nav" %>
+  <div class="container">
+  	<%= content_tag :div, alert, class: "flash bg-danger" if alert %>
+  	<%= content_tag :div, notice, class: "flash bg-success" if notice %>
+  	
+  </div>
+    <%= yield %>
+  </body>
+</html>
